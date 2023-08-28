@@ -7,10 +7,10 @@ namespace BMI_Tracker
 
     internal class Program
     {
-        static List<Person> persons;
+        static List<string> persons;
         static void Main(string[] args)
         {
-            persons = new List<Person>();
+            persons = new List<string>();
             Menu();
         }
         public static void Menu()
@@ -46,7 +46,7 @@ namespace BMI_Tracker
             Console.WriteLine("What is the weight?");
             string weight = Console.ReadLine();
 
-            Person person = new Person { Name = name, Height = height, Weight = weight };
+            string person = "Name = " + name + ", Height = " + height + ", Weight = " + weight;
             persons.Add(person);
 
             Console.WriteLine("Person succesfully added!");
