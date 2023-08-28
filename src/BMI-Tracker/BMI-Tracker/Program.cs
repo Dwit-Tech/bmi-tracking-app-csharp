@@ -1,10 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
 
 namespace BMI_Tracker
 {
+
     internal class Program
     {
+        static List<Person> persons;
         static void Main(string[] args)
+        {
+            persons = new List<Person>();
+            Menu();
+        }
+        public static void Menu()
         {
             Console.WriteLine("Welcome to the BMI tracker app");
             Console.WriteLine("------------------------------------");
@@ -16,8 +25,32 @@ namespace BMI_Tracker
             Console.WriteLine("5. Find : find information about specified patients");
 
             Console.WriteLine("Enter your selected option to proceed");
-
             string input = Console.ReadLine();
+
+            if (input == "1")
+            {
+                PerformAddPerson();
+                Menu();
+            }
+        }
+
+        public static void PerformAddPerson()
+        {
+            Console.WriteLine("Time to add a person.");
+            Console.WriteLine("What is the name?");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("What is the height?");
+            string height = Console.ReadLine();
+
+            Console.WriteLine("What is the weight?");
+            string weight = Console.ReadLine();
+
+            Person person = new Person { Name = name, Height = height, Weight = weight };
+            persons.Add(person);
+
+            Console.WriteLine("Person succesfully added!");
+
         }
     }
 }
