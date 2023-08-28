@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/../obj
+/.vs
+/src/BMI-Tracker/.vs/BMI-Tracker
+/src/BMI-Tracker/BMI-Tracker/obj
